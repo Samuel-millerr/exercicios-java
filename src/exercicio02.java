@@ -20,6 +20,5 @@ public class exercicio02 {
         } else {
             System.out.printf("\nSoma dos números: %.1f\nCálculo com condição: %.1f", soma, (soma-5));
         }
-
     }
 }

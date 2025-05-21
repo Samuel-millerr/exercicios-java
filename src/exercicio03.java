@@ -18,8 +18,5 @@ public class exercicio03 {
         } else {
             System.out.printf("O número %s não possuí 3 algarismos!", numero);
         }
-
-
-
     }
 }
