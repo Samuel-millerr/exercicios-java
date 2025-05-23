@@ -23,11 +23,15 @@ public class exercicio12 {
             valido = false;
             System.out.println(" O e-mail não possui @.");
         } else {
+            if (email.indexOf("@") != email.lastIndexOf("@"))  {
+                valido = false;
+                System.out.println(" O e-mail possui mais de um @.");
+            }
             if (!email.substring(inicioDominio, finalDominio).contains(".")) {
                 valido = false;
                 System.out.println(" O e-mail não tem um o ponto depois o @.");
             }
-            if (email.substring(inicioDominio, finalDominio).equals(".")) {
+            if (email.substring(inicioDominio, inicioDominio+1).equals(".")) {
                 valido = false;
                 System.out.println(" O e-mail possui um ponto após o arroba.");
             }
