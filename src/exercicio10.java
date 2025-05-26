@@ -25,9 +25,5 @@ public class exercicio10 {
             }
             System.out.printf("Parabéns %s, você teve um aumento de %s. Seu novo salário é R$%.2f", nome, porcentagem, salarioAumento);
         }
-
-
-
-
     }
 }

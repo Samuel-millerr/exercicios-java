@@ -10,9 +10,9 @@ public class exercicio01 {
         int numero = Integer.parseInt(scanner.nextLine());
 
         if (numero % 3 == 0) {
-            System.out.printf("O número %.0f É multiplo de 3.", numero);
+            System.out.printf("O número %d É multiplo de 3.", numero);
         } else {
-            System.out.printf("O número %f NÃO É multiplo de 3", numero);
+            System.out.printf("O número %d NÃO É multiplo de 3", numero);
         }
     }
 }

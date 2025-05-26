@@ -74,7 +74,6 @@ public class exercicio13 {
             System.out.println("==== OUTPUT ====");
             System.out.printf((convertido == 0) ? "Não foi escolhido nenhuma das moedas!" : "Quantidade de moedas: %d \nCotação do %s: %.2f \nValor Final: %.2f", valor,moedaCotada, cotacao, convertido);
         }
-
     }
 }
 

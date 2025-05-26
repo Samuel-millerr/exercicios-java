@@ -27,6 +27,5 @@ public class exercicio11 {
             }
             System.out.printf("Esse triangulo é um triangulo '%s'!", classificacao);
         }
-
     }
 }

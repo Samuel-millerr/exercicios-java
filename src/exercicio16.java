@@ -45,7 +45,5 @@ public class exercicio16 {
         } else {
             System.out.printf("Segue abaixo as informações sobre a comissão: \nValor da Venda: R$%.2f \nComissão Fixa: R$%.2f \nComissao total (taxa:%.0f%%): R$%.2f", valorVenda, comissaoFixa, taxaComissao*100, comissao);
         }
-
-
     }
 }

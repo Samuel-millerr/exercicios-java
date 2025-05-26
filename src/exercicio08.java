@@ -21,6 +21,5 @@ public class exercicio08 {
             }
             System.out.printf("O valor total do estacionamento é de R$%.1f", calculo);
         }
-
     }
 }

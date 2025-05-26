@@ -16,7 +16,7 @@ public class exercicio02 {
         double soma = numero01 + numero02;
 
         if (soma > 20) {
-            System.out.printf("\nSoma dos números: %.1f\nCálculo com condição: %.1f", soma, (soma+20));
+            System.out.printf("\nSoma dos números: %.1f\nCálculo com condição: %.1f", soma, (soma+8));
         } else {
             System.out.printf("\nSoma dos números: %.1f\nCálculo com condição: %.1f", soma, (soma-5));
         }

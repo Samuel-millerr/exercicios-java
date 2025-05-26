@@ -7,7 +7,7 @@ public class exercicio05 {
 
         System.out.println("=== VERIFICADOR DE CLASSE ELEITORAL ===");
         System.out.println("A classificação atual da classe eleitoral está no seguinte esquema: ");
-        System.out.println(" Não eleitor (abaixo de 16 anos)]\n Eleitor Obrigatório (entre 18 e 65 anos)\n Eleitor facultativo (16 a 18 anos e maior de 65 anos");
+        System.out.println(" Não eleitor (abaixo de 16 anos)\n Eleitor Obrigatório (entre 18 e 65 anos)\n Eleitor facultativo (16 a 18 anos e maior de 65 anos");
         System.out.print("Insira a idade: ");
         int idade = Integer.parseInt(scanner.nextLine());
 

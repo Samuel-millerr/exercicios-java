@@ -6,7 +6,6 @@ public class exercicio04 {
 
         int numero01, numero02, numero03;
         int maior, meio, menor;
-        String ordemCrescente;
 
         System.out.println("=== ORDEM CRESCENTE ===");
         System.out.print("1° número: ");
@@ -17,9 +16,9 @@ public class exercicio04 {
         numero03 = Integer.parseInt(scanner.nextLine());
 
         if (numero01 == numero02 && numero01 == numero03) {
-            menor = 0;
-            meio = 0;
-            maior = 0;
+            menor = numero01;
+            meio = numero02;
+            maior = numero03;
         } else if (numero01 <= numero02 && numero01 <= numero03){
             menor = numero01;
             if (numero02 <= numero03) {
@@ -49,6 +48,5 @@ public class exercicio04 {
             }
         }
         System.out.println("Ordem Crescente: " + menor + " - " + meio + " - " + maior);
-
-        }
     }
+}

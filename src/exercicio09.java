@@ -6,7 +6,7 @@ public class exercicio09 {
 
         System.out.println("=== CALCULO DE KM/L ===");
         System.out.println("Para calcularmos o km/l, insira as informações abaixo, por gentileza: ");
-        System.out.print("Distância percorrida (em km/l): ");
+        System.out.print("Distância percorrida (em km): ");
         double distanciaPercorrida = Double.parseDouble(scanner.nextLine());
         System.out.print("Quantidade de litros consumidos (em litros): ");
         double litrosConsumidos = Double.parseDouble(scanner.nextLine());
@@ -23,7 +23,5 @@ public class exercicio09 {
         } else {
             System.out.println("Super econômico.");
         }
-
     }
-
 }

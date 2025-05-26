@@ -10,7 +10,7 @@ public class exercicio12 {
         System.out.print("Insira um email para ser verificado: ");
         email = scanner.nextLine();
 
-        int inicioDominio = email.indexOf("@") + 1;
+        int inicioDominio = email.indexOf("@");
         int finalDominio = email.length();
         int primeiroCaracter = email.charAt(0);
         int ultimoCaracter = email.charAt(finalDominio - 1);
@@ -27,13 +27,13 @@ public class exercicio12 {
                 valido = false;
                 System.out.println(" O e-mail possui mais de um @.");
             }
-            if (!email.substring(inicioDominio, finalDominio).contains(".")) {
+            if (!email.substring(inicioDominio + 1, finalDominio).contains(".")) {
                 valido = false;
                 System.out.println(" O e-mail não tem um o ponto depois o @.");
             }
-            if (email.substring(inicioDominio, inicioDominio+1).equals(".")) {
+            if ((inicioDominio != finalDominio-1) && (email.substring(inicioDominio+1, inicioDominio+2).equals("."))) {
                 valido = false;
-                System.out.println(" O e-mail possui um ponto após o arroba.");
+                System.out.println(" O e-mail possui um ponto logo após o arroba.");
             }
         }
 

@@ -36,8 +36,5 @@ public class exercicio07 {
         }
 
         System.out.printf("\n%s seu IMC é %.2f e sua classificação é %s", nome, imc, classificacao);
-        }
-
-
     }
-
+}
