@@ -4,72 +4,89 @@ public class exercicio14 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        boolean bissexto;
 
         System.out.println("=== DIAS PARA O NATAL ===");
         String data = scanner.nextLine();
 
-        String dia = data.substring(0,2);
-        String mes = data.substring(3,5);
+        String dia = data.substring(0, 2);
+        String mes = data.substring(3, 5);
         String ano = data.substring(6);
         int diaInt = Integer.parseInt(dia);
         int mesInt = Integer.parseInt(mes);
         int anoInt = Integer.parseInt(ano);
 
-        System.out.println("DEBUG");
-        System.out.println(diaInt);
-        System.out.println(mesInt);
-        System.out.println(anoInt);
-        if ((!data.substring(2,3).equals("/")) || (!data.substring(5,6).equals("/"))) {
-            System.out.println("O formato da data está incorreto");
-            if (data.length() != 9) {
-                System.out.println("O tamanho está incorreto!");
-            }
-        } else {
-            int diasFaltantes = 30*(12-mesInt);
+        int diasFaltantes;
+        int diasPassados;
+        boolean bissexto;
 
-            System.out.println("\nDEBUG");
-            System.out.println(diasFaltantes);
+        if ((!data.substring(2, 3).equals("/")) || (!data.substring(5, 6).equals("/"))) {
+            System.out.println("O formato da data está incorreto");
+        } else if (data.length() != 10) {
+            System.out.println("O tamanho está incorreto!");
+        } else {
+            bissexto = (anoInt % 4 == 0) || (anoInt % 100 == 0 && anoInt % 400 == 0) && (diaInt != 29);
 
             switch (mesInt) {
                 case 1:
-                    diasFaltantes = (diaInt==31) ? diasFaltantes += 1 : diasFaltantes;
-                    System.out.println("\nDEBUG");
-                    System.out.println(diasFaltantes);
-                case 2:
-                    if ((anoInt % 4 == 0) || (anoInt % 100 == 0 && anoInt % 400 != 0)) {
-                        bissexto = true;
-                        diasFaltantes += 29;
+                    if (bissexto) {
+                        diasFaltantes = (359+1) - diaInt;
                     } else {
-                        bissexto = false;
-                        diasFaltantes += 28;
+                        diasFaltantes = 359 - diaInt;
                     }
-                    System.out.println("\nDEBUG");
-                    System.out.println(diasFaltantes);
+                    break;
+                case 2:
+                    if (bissexto) {
+                        diasPassados = (31 - 1) + diaInt;
+                    } else {
+                        diasPassados = 31 + diaInt;
+                    }
+                    diasFaltantes = 359 - diasPassados;
+                    break;
+                case 3:
+                    diasPassados = 59 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
+                case 4:
+                    diasPassados = 90 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
                 case 5:
-                    diasFaltantes = (diaInt==31) ? diasFaltantes += 2 : diasFaltantes;
-                    System.out.println("\nDEBUG");
-                    System.out.println(diasFaltantes);
+                    diasPassados = 120 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
+                case 6:
+                    diasPassados = 151 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
                 case 7:
-                    diasFaltantes = (diaInt==31) ? diasFaltantes += 3 : diasFaltantes;
-                    System.out.println("\nDEBUG");
-                    System.out.println(diasFaltantes);
+                    diasPassados = 181 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
                 case 8:
-                    diasFaltantes = (diaInt==31) ? diasFaltantes += 4 : diasFaltantes;
-                    System.out.println("\nDEBUG");
-                    System.out.println(diasFaltantes);
+                    diasPassados = 212 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
+                case 9:
+                    diasPassados = 242 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
                 case 10:
-                    diasFaltantes = (diaInt==31) ? diasFaltantes += 5 : diasFaltantes;
-                    System.out.println("\nDEBUG");
-                    System.out.println(diasFaltantes);
+                    diasPassados = 303 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
+                case 11:
+                    diasPassados = 304 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
                 case 12:
-                    diasFaltantes = (diaInt==31) ? diasFaltantes += 1 : diasFaltantes;
-                    System.out.println("\nDEBUG");
-                    System.out.println(diasFaltantes);
+                    diasPassados = 333 + diaInt;
+                    diasFaltantes = 359 - diasPassados;
+                    break;
+                default:
+                    diasFaltantes = 0;
+                    System.out.println("Não existem mais de 12 meses no ano!");
             }
             System.out.println(diasFaltantes);
-
-
-            }
         }
     }
+}
