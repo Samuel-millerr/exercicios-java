@@ -16,7 +16,7 @@ public class exercicio15 {
         primeiroDigito = numeroString.substring(0, 1);
         segundoDigito = numeroString.substring(1, 2);
 
-        if (Integer.parseInt(numeroString) > 99) {
+        if (Integer.parseInt(numeroString) > 99 || Integer.parseInt(numeroString) < 0) {
             System.out.println("São permitidos somente números de 0 a 99!");
         } else {
             switch (primeiroDigito) {
@@ -150,8 +150,6 @@ public class exercicio15 {
                     case "9":
                         System.out.print(" e Nove");
                         break;
-                    default:
-                        System.out.println(" ");
                 }
             }
         }

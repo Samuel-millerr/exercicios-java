@@ -32,7 +32,7 @@ public class exercicio07 {
         } else if (imc < 40) {
             classificacao = "Obesidade Grau II";
         } else {
-            classificacao = "Obresida Grau III";
+            classificacao = "Obesidade Grau III";
         }
 
         System.out.printf("\n%s seu IMC é %.2f e sua classificação é %s", nome, imc, classificacao);

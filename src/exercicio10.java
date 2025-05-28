@@ -16,7 +16,7 @@ public class exercicio10 {
         if (salario < 759) {
             System.out.println("A informação do salário está em incorreta. Em nossa empresa não oferecemos salários abaixo dos R$759");
         } else {
-            if (salario < 3000) {
+            if (salario <= 3000) {
                 salarioAumento = salario*1.35;
                 porcentagem = "35%";
             } else {
